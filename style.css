@@ -87,7 +87,8 @@ section {
 
 .home {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6');
     background-size: cover;
@@ -734,4 +735,97 @@ form textarea {
 .service-content h3 {
     margin-top: 25px;
     color: var(--main-color);
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #202020;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.4s;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .home {
+        height: auto;
+        padding: 100px 5% 50px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modern-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ba-box {
+        width: 100%;
+    }
+
 }
