@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Responsive Portfolio Website</title>
 	<!---custom css link---->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -265,6 +265,15 @@ let url = "https://wa.me/" + whatsappNumber + "?text=" + text;
 window.open(url, '_blank');
 }
 </script>
+<script>
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+menu.onclick = () => {
+    navlist.classList.toggle('open');
+}
+</script>
+
 <!---------End Section---------->
 <section class="end">
 	<div class="last-text">
