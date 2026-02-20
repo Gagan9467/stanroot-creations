@@ -589,17 +589,18 @@ form textarea {
     margin-top: 40px;
 }
 
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gallery-item img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    border-radius: 12px;
 }
 
 .gallery-overlay {
@@ -892,4 +893,56 @@ form textarea {
 .google-form {
     padding: 80px 10%;
     text-align: center;
+}
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: var(--main-color);
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #fff;
+    color: #000;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+}
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+}
+@media (max-width: 768px) {
+    .home {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #ffffff;
+    }
 }
