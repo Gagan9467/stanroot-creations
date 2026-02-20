@@ -90,7 +90,7 @@ section {
     min-height: 100vh;
     height: auto;
     width: 100%;
-    background-image: url('/Users/gagan/Desktop/stanroot/stanroot logo.jpg');
+    background-image: url('stanroot-logo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
