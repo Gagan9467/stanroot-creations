@@ -940,10 +940,10 @@ form textarea {
 }
 @media (max-width: 768px) {
     .home {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-color: #ffffff;
+        background-size: cover;
+        background-position: center;
+        padding-top: 180px;
+        padding-bottom: 80px;
     }
 }
 @media (max-width: 768px) {
@@ -961,6 +961,68 @@ form textarea {
     .gallery-item img {
         width: 100%;
         height: auto;
+    }
+
+}
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px !important;
+    }
+
+    .modern-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .modern-gallery .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .modern-gallery .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+    }
+}
+.project-page {
+    background:#2a2a2a;
+    color:white;
+    padding:50px;
+}
+
+@media (max-width:768px){
+    .project-page{
+        padding:20px;
+    }
+}
+@media (max-width: 768px) {
+
+    .home-text {
+        text-align: center;
+        margin-top: 220px;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .slide {
+        margin-top: 40px;
     }
 
 }
