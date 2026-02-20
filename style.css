@@ -90,7 +90,7 @@ section {
     min-height: 100vh;
     height: auto;
     width: 100%;
-    background-image: url('https://www.decorpot.com/images/blogimage1361284108interior-designs-for-master-bedroom.jpg');
+    background-image: url('/Users/gagan/Desktop/stanroot/stanroot logo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -885,4 +885,11 @@ form textarea {
 }
 .call-btn {
     background: #ff5e5e;
+}
+.home-text .green-line {
+    color: #28a745 !important;
+}
+.google-form {
+    padding: 80px 10%;
+    text-align: center;
 }
