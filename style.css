@@ -946,3 +946,21 @@ form textarea {
         background-color: #ffffff;
     }
 }
+@media (max-width: 768px) {
+
+    .modern-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+}
