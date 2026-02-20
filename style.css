@@ -893,3 +893,6 @@ form textarea {
     padding: 80px 10%;
     text-align: center;
 }
+.logo img {
+    height: 50px;
+}
