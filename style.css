@@ -90,7 +90,7 @@ section {
     min-height: 100vh;
     height: auto;
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6');
+    background-image: url('stanrootlogo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -892,7 +892,4 @@ form textarea {
 .google-form {
     padding: 80px 10%;
     text-align: center;
-}
-.logo img {
-    height: 50px;
 }
