@@ -1026,3 +1026,49 @@ form textarea {
     }
 
 }
+.vastu {
+    padding: 100px 10%;
+    background: var(--second-bg-color);
+    text-align: center;
+}
+
+.vastu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.vastu-card {
+    background: var(--bg-color);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    transition: 0.3s;
+}
+
+.vastu-card:hover {
+    transform: translateY(-10px);
+}
+
+.vastu-card h3 {
+    font-size: 26px;
+    color: var(--main-color);
+}
+
+.vastu-role {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.vastu-desc {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.vastu-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
