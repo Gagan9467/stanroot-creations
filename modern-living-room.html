@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Modern Living Room Projects</title>
     <link rel="stylesheet" href="style.css">
@@ -7,113 +8,135 @@
 
 <body class="project-page">
 
-<h1 style="text-align:center;">Modern Living Room Projects</h1>
+    <h1 style="text-align:center;">Modern Living Room Projects</h1>
 
-<div class="modern-gallery">
+    <div class="modern-gallery">
 
-    <div class="gallery-item">
-        <img src="modern living room/5ea94421-142b-45c7-8f97-ee54ba629716.JPG">
+        <div class="gallery-item">
+            <img src="modern living room/5ea94421-142b-45c7-8f97-ee54ba629716.JPG">
+        </div>
+
+        <div class="gallery-item">
+            <img src="modern living room/67bd74b7-32ea-4fb5-9827-5546ec51e1f2.JPG">
+        </div>
+
+        <div class="gallery-item">
+            <img src="modern living room/4186df17-9c69-4180-a0e9-925aa21f5fa3.JPG">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/bc55015a-be87-4f3b-884e-52d07d8da8af.JPG">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 22.52.02 (1).jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 22.52.03 (1).jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 22.52.04 (1).jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 22.52.04 (2).jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 23.16.19.jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="modern living room/WhatsApp Image 2026-05-23 at 23.16.20.jpeg">
+
+        </div>
     </div>
 
-    <div class="gallery-item">
-        <img src="modern living room/67bd74b7-32ea-4fb5-9827-5546ec51e1f2.JPG">
+
+    <div style="text-align:center; margin-top:40px;">
+        <a href="index.html#portfolio" class="btn">Back to Portfolio</a>
     </div>
 
-    <div class="gallery-item">
-        <img src="modern living room/4186df17-9c69-4180-a0e9-925aa21f5fa3.JPG">
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+
+        <img class="lightbox-img" id="lightbox-img">
+
+        <div class="controls">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+
+        <div class="counter" id="counter"></div>
     </div>
-<div class="gallery-item">
-        <img src="modern living room/bc55015a-be87-4f3b-884e-52d07d8da8af.JPG">
-    </div>
-</div>
+    <script>
+        let images = document.querySelectorAll(".gallery-item img");
+        let lightbox = document.getElementById("lightbox");
+        let lightboxImg = document.getElementById("lightbox-img");
+        let counter = document.getElementById("counter");
 
-<div style="text-align:center; margin-top:40px;">
-    <a href="index.html#portfolio" class="btn">Back to Portfolio</a>
-</div>
-<div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
+        let currentIndex = 0;
+        let zoom = 1;
 
-    <img class="lightbox-img" id="lightbox-img">
+        // OPEN
+        images.forEach((img, index) => {
+            img.addEventListener("click", () => {
+                currentIndex = index;
+                showImage();
+                lightbox.style.display = "flex";
+            });
+        });
 
-    <div class="controls">
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-    </div>
+        // SHOW IMAGE
+        function showImage() {
+            lightboxImg.src = images[currentIndex].src;
+            counter.innerText = (currentIndex + 1) + " / " + images.length;
+            zoom = 1;
+            lightboxImg.style.transform = "scale(1)";
+        }
 
-    <div class="counter" id="counter"></div>
-</div>
-<script>
-let images = document.querySelectorAll(".gallery-item img");
-let lightbox = document.getElementById("lightbox");
-let lightboxImg = document.getElementById("lightbox-img");
-let counter = document.getElementById("counter");
+        // NEXT
+        document.querySelector(".next").onclick = () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+        };
 
-let currentIndex = 0;
-let zoom = 1;
+        // PREV
+        document.querySelector(".prev").onclick = () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+        };
 
-// OPEN
-images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-        currentIndex = index;
-        showImage();
-        lightbox.style.display = "flex";
-    });
-});
+        // CLOSE
+        document.querySelector(".close").onclick = () => {
+            lightbox.style.display = "none";
+        };
 
-// SHOW IMAGE
-function showImage() {
-    lightboxImg.src = images[currentIndex].src;
-    counter.innerText = (currentIndex + 1) + " / " + images.length;
-    zoom = 1;
-    lightboxImg.style.transform = "scale(1)";
-}
+        // CLICK OUTSIDE CLOSE
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        };
 
-// NEXT
-document.querySelector(".next").onclick = () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage();
-};
+        // ZOOM
+        lightboxImg.onclick = () => {
+            zoom = zoom === 1 ? 2 : 1;
+            lightboxImg.style.transform = "scale(" + zoom + ")";
+        };
 
-// PREV
-document.querySelector(".prev").onclick = () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage();
-};
+        // SWIPE (MOBILE)
+        let startX = 0;
 
-// CLOSE
-document.querySelector(".close").onclick = () => {
-    lightbox.style.display = "none";
-};
+        lightbox.addEventListener("touchstart", e => {
+            startX = e.touches[0].clientX;
+        });
 
-// CLICK OUTSIDE CLOSE
-lightbox.onclick = (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = "none";
-    }
-};
+        lightbox.addEventListener("touchend", e => {
+            let endX = e.changedTouches[0].clientX;
 
-// ZOOM
-lightboxImg.onclick = () => {
-    zoom = zoom === 1 ? 2 : 1;
-    lightboxImg.style.transform = "scale(" + zoom + ")";
-};
-
-// SWIPE (MOBILE)
-let startX = 0;
-
-lightbox.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-});
-
-lightbox.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
-
-    if (startX - endX > 50) {
-        document.querySelector(".next").click();
-    } else if (endX - startX > 50) {
-        document.querySelector(".prev").click();
-    }
-});
-</script>
+            if (startX - endX > 50) {
+                document.querySelector(".next").click();
+            } else if (endX - startX > 50) {
+                document.querySelector(".prev").click();
+            }
+        });
+    </script>
 </body>
+
 </html>
